@@ -1,11 +1,7 @@
-# TPriority
-CLI tool to play with the priority classes and priority of the threads of a process
+# PPriority
+Herramienta que permite jugar con las clases de prioridad y prioridad de memoria de un proceso y sus hilos
 
-The tool uses the ```SetPriorityClass``` and ```SetThreadPriority``` functions to calculate the base priority of threads, uses ```THREADENTRY32``` struct from ```tlhelp32.h``` to iterate over all threads in a process and set the priority according to user input.
+La herramiente hace uso de ```SetPriorityClass``` y ```SetThreadPriority``` para calcular la prioridad base de los hilos, usa la estructura ```THREADENTRY32``` de ```tlhelp32.h``` para interar sobre todos los hilos de un proceso, tambien usa ```SetProcessInformation``` con ```MEMORY_PRIORITY_INFORMAT``` para cambiar la prioridad de memoria, y por ultimo, usa ```SetProcessPriorityBoost``` para activar o desactivar los priority boost del proceso
 
-If you want to know the combinations of class priority and thread priority, read this:
+Si quieres saber las diferentes combinaciones con las prioridades, lee aqui:
 https://learn.microsoft.com/en-US/windows/win32/procthread/scheduling-priorities
-
-If you use GNU/Linux, you can compile it with: ```x86_64-w64-mingw32-g++ TPriority.c -o TPriority```
-
-To-do: Use ```SetProcessPriorityBoost``` and ```SetThreadPriorityBoost``` to manage Priority Boosts
