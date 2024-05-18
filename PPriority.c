@@ -149,7 +149,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
 	        SendMessage(hComboMemoryPriority, CB_ADDSTRING, 0, (LPARAM)buffer);
 	    }
 
-	    CreateWindow(_T("BUTTON"), _T("Set Priorities"), WS_VISIBLE | WS_CHILD, 140, 170, 120, 30, hwnd, (HMENU)1, NULL, NULL);
+	    CreateWindow(_T("BUTTON"), _T("Establecer"), WS_VISIBLE | WS_CHILD, 140, 170, 120, 30, hwnd, (HMENU)1, NULL, NULL);
 	    hTogglePriorityBoost = CreateWindow(_T("BUTTON"), _T("Priority Boost: Activado"), WS_VISIBLE | WS_CHILD, 10, 140, 200, 20, hwnd, (HMENU)2, NULL, NULL);
 	    break;
 
